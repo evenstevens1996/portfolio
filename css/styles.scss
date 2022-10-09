@@ -1,10 +1,10 @@
-$color-primary: #3046C5;
-$color-secondary: #5637dd;
+$color-primary: #6495ED;
+$color-secondary: #00008B;
 $color-pale: green;
 $color-mid: #901CAD;
 $color-dark: #60106b;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
-$color-teal: #17A2B8;
+$color-teal: #DAA520;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Copperplate", fantasy;
@@ -80,4 +80,10 @@ a, a:hover {
         background-color: $color-mid;
         color: white;
     }
+}
+
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
 }

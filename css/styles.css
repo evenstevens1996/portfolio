@@ -1,5 +1,7 @@
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background-color: #DCDCDC;
+ }
 
 h1, h2, h3 {
   font-family: "Copperplate", fantasy; }
@@ -8,12 +10,12 @@ h2 {
   color: #3046C5; }
 
 header h2 {
-  color: green; }
+  color: goldenrod; }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b);
+  background-image: linear-gradient(to right, #0000CD, #4169E1, #1E90FF);
   color: white; }
 
 .row-content {
@@ -22,7 +24,8 @@ header h2 {
   min-height: 200px; }
 
 .navbar {
-  background-color: #901CAD; }
+  background-color:#DAA520;
+}
 
 a, a:hover {
   color: inherit;
@@ -41,9 +44,21 @@ a, a:hover {
   z-index: 100; }
 
 #reserveModal .modal-header {
-  background-color: #17A2B8;
+  background-color: blue;
   color: white; }
 
 #loginModal .modal-header {
-  background-color: #901CAD;
+  background-color: #DAA520;
   color: white; }
+
+  .tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
+}
+
+.site-footer {
+  background-color: #DAA520;
+  padding: 20px 0;
+  color: white;
+}
