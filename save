@@ -1,0 +1,91 @@
+ <header class="masthead text-center text-white">
+        <div class="masthead-content">
+                <img src="img/logo.PNG" height="200">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-0">Shelby's Soccer League</h1>
+                <h2 class="masthead-subheading mb-0">a new way to play</h2>
+                <div>
+                <a role="button" class="btn btn-dark text-nowrap rounded-pill mt-5" id="#reserveModal"> Register Now</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+    </header>
+
+
+    <div id="#reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h3 class="modal-title">Register Here</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row form-group">
+                                <label for="players" class="col-sm-6 col-form-label">Current Grade Level</label>
+                                <div class="col-12 col-sm-6">
+                                    <select name="players" id="players" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="1">1st</option>
+                                        <option value="2">2nd</option>
+                                        <option value="3">3rd</option>
+                                        <option value="4">4th</option>
+                                        <option value="5">5th</option>
+                                        <option value="6">6th</option>
+                                        <option value="7">7th</option>
+                                        <option value="8">8th</option>
+                                        <option value="9">9th</option>
+                                        <option value="10">10th</option>
+                                        <option value="11">11th</option>
+                                        <option value="12">12th</option>
+                                        <option value="13">Adult</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="players" class="col-12 col-sm-6 col-form-label" for="date">Date of Birth</label>
+                                <div class="col-12 col-sm-6">
+                                    <input class="col form-control" type="date" name="date" id="date" value="placeholder">
+                                </div>    
+                            </div>
+                            <div class="row form-group">
+                                <label for="players" class="col-sm-6 col-form-label">Current Skill Level</label>
+                                <div class="col-12 col-sm-6">
+                                    <select name="players" id="players" class="form-control">
+                                        <option selected>Select...</option>
+                                        <option value="1">Beginner</option>
+                                        <option value="2">Intermediate</option>
+                                        <option value="3">Great</option>
+                                        <option value="4">Expert</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <label for="players" class="col-sm-6 col-form-label" for="loginEmail">Email address</label>
+                                <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <label for="players" class="col-sm-6 col-form-label" for="loginEmail">Phone Number</label>
+                                <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="(XXX)XXX-XXXX">
+                                </div>
+                            </div>               
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button data-dismiss="modal" class="btn btn-dark">Exit</button>
+                                    <button type="submit" class="btn btn-warning">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>

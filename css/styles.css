@@ -9,7 +9,7 @@ h2 {
   color: #3046C5; }
 
 header h2 {
-  color: #DAA520; }
+  color: white; }
 
 header.masthead {
   position: relative;
@@ -21,16 +21,6 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover; }
-
-header.masthead .masthead-content {
-  z-index: 1;
-  position: relative; }
-
-header.masthead .masthead-content .masthead-heading {
-  font-size: 4rem; }
-
-header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem; }
 
 header.masthead .bg-circle {
   z-index: 0;
