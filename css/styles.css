@@ -1,7 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #DCDCDC;
- }
+  background-color: #d5cece; }
 
 h1, h2, h3 {
   font-family: "Copperplate", fantasy; }
@@ -12,11 +11,50 @@ h2 {
 header h2 {
   color: #DAA520; }
 
-.jumbotron {
-  margin: 0;
-  padding: 30px;
-  background-image: linear-gradient(to right, #0000CD, #4169E1, #1E90FF);
-  color: white; }
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 7rem;
+  background: linear-gradient(0deg, #0000CD 0%, #1E90FF 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover; }
+
+header.masthead .masthead-content {
+  z-index: 1;
+  position: relative; }
+
+header.masthead .masthead-content .masthead-heading {
+  font-size: 4rem; }
+
+header.masthead .masthead-content .masthead-subheading {
+  font-size: 2rem; }
+
+header.masthead .bg-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: linear-gradient(0deg, #DAA520 0%, #ff6a00 100%); }
+
+header.masthead .bg-circle-1 {
+  height: 90rem;
+  width: 90rem;
+  bottom: -55rem;
+  left: -55rem; }
+
+header.masthead .bg-circle-2 {
+  height: 50rem;
+  width: 50rem;
+  top: -25rem;
+  right: -25rem; }
+
+header.masthead .bg-circle-3 {
+  height: 20rem;
+  width: 20rem;
+  bottom: -10rem;
+  right: 5%; }
 
 .row-content {
   padding: 50px 0;
@@ -24,8 +62,7 @@ header h2 {
   min-height: 200px; }
 
 .navbar {
-  background-color:#DAA520;
-}
+  background-color: black; }
 
 a, a:hover {
   color: inherit;
@@ -51,19 +88,14 @@ a, a:hover {
   background-color: #DAA520;
   color: white; }
 
-  .tab-content {
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
+.tab-content {
+  border: 1px solid #DDD;
+  border-top: none;
+  padding: 10px; }
 
-.site-footer {
-  background-color: #DAA520;
-  padding: 20px 0;
-  color: white;
-}
+footer {
+  background-color: black;
+  color: white; }
 
 h5 {
-  font-weight: bold;
-}
-
+  font-weight: bold; }

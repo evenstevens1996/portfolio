@@ -24,3 +24,8 @@ $(function() {
         $("#loginModal").modal("toggle");
     });
 });
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
+}

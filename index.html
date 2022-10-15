@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags always come first -->
+
     <meta charset="utf-8" />        
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
@@ -13,29 +13,85 @@
     <link rel="stylesheet" href="css/styles.css" />
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    
     <title>Shelby's Soccer League</title>
- </head>
-
+</head>
 <body>
-
-    <header class="jumbotron jumbotron-fluid">
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" />
-                </div>
+            <a class="navbar-brand" href="#"><img src="img/soccerball.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#soccerNavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#soccerNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="soccerNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fieldinfo.html"><i class="fa fa-info fa-lg"></i> Field Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agegroups.html"><i class="fa fa-list fa-lg"></i>Age Groups</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i> Coaches Login
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
 
-                <div class="col">
-                    <h1>Shelby's Soccer League</h1>
-                    <h2>a new way to play</h2>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Coaches Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="col col-md-4 col-xl-2 mt-4">
-                    <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-warning text-nowrap">Register Here</a>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-dark btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-warning btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <header class="masthead text-center text-white">
+        <div class="masthead-content">
+                <img src="img/logo.PNG" height="200">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-0">Shelby's Soccer League</h1>
+                <h2 class="masthead-subheading mb-0">a new way to play</h2>
+                <a role="button" class="btn btn-dark text-nowrap rounded-pill mt-5" id="reserveButton">Register Now</a>
+            </div>
+            
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
     </header>
+
 
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
@@ -97,18 +153,7 @@
                                 <div class="col-12 col-sm-6">
                                 <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="(XXX)XXX-XXXX">
                                 </div>
-                            </div>                
-                            <div class="row form-group">
-                                <label class="col-sm-6 col-form-label">League Type</label>
-                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-dark">
-                                        <input type="radio" name="siteType" id="siteSeasonal" value="Seasonal">Seasonal
-                                    </label>
-                                    <label class="btn btn-warning">
-                                        <input type="radio" name="siteType" id="siteYear" value="Year">Year
-                                    </label>
-                                </div>
-                            </div>
+                            </div>               
                             <div class="form-group row">
                                 <div class="col">
                                     <button data-dismiss="modal" class="btn btn-dark">Exit</button>
@@ -121,72 +166,59 @@
             </div>
        </div>
     </div>
-
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/soccerball.png" height="30" width="30" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="nucampNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fieldinfo.html"><i class="fa fa-info fa-lg"></i> Field Info</a></li>
-                    <li class="nav-item"><a class="nav-link" href="agegroups.html"><i class="fa fa-list fa-lg"></i>Age Groups</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
-                </ul>
-                <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in"></i> Coaches Login
-                    </a>
-                </span>
-            </div>
-        </div>
-    </nav>
-
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Coaches Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-12">
-                                    <label class="sr-only" for="loginEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
-                                </div>
-                                <div class="form-group col-12">
-                                    <label class="sr-only" for="loginPassword">Password</label>
-                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
-                                </div>
-                                <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
-                                        <label class="form-check-label"> Remember me</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-
-
     <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Welcome!</h2>
+                <hr />
+            </div>
+        </div>   
+    
+        <div class="row row-content">
+            <div class="col-sm-6">
+                <h3>About Us</h3>
+                <p>We began this league 4 years ago. We started with 60 players our first seasonn and we now have over 400 this season. Here at Shelby's Soccer League, we strive to teach all players skills that they can use both on and off the field. We currently have leagues for kids 4 years old and up. One thing that is really unique about us, is that we also have an adult league. You and your family can register today!</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/h2.jpg" height="300">
+            </div>
+        </div>
+        <h3>Testimonals</h3> 
+        <div class="card-columns">
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <p>This is my favorite Legaue! My teamates are now my best friends!</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                        Josh <cite title="Source Title">Tots League</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <p>My kids have all been playing sports for a long time. This is by far the best league we have been in. The coaches care and there is always someone around to answer your question. I highly recommend players of all levels to try this league out.</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Maria <cite title="Source Title">Mom</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <p>We love our team, we love our coaches, we love this league!</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Tegan <cite title="Source Title">U12</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>    
+
+  
+   
         <div class="row row-content">
             <div class="col">
                 <h3>Girls Standings</h3>
@@ -541,89 +573,42 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Our Community Partners</h2>
-            </div>
-            <div class="col">
-                <div class="media">
-                     <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
-                    <div class="media-body align-self-center">
-                        <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                    </div>
-                </div>
-             </div>
-        </div>
-        <div class="row row-content">
-            <div class="col-sm-9 offset-1">
-                <h2>League Facts</h2>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-dark table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>2019</th>
-                                <th>2020</th>
-                                <th>2021</th>
-                                <th>2022</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Number of Players</th>
-                                <td>60</td>
-                                <td>152</td>
-                                <td>206</td>
-                                <td>413</td>
-                            </tr>
-                            <tr>
-                                <th>Number of Coaches</th>
-                                <td>6</td>
-                                <td>12</td>
-                                <td>21</td>
-                                <td>41</td>
-                            </tr>
-                            <tr>
-                                <th>Number of Teams</th>
-                                <td>6</td>
-                                <td>15</td>
-                                <td>20</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <th>Number of Field Locations</th>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>4</td>
-                                <td>6</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>                
-            </div>
-       </div>
+
+
        <div class="row row-content">
-  
-        <div class="col-sm-6">
+            <div class="col-12">
+            <h3>Our Sponsors</h3>
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#homeCarousel" data-slide-to="1"></li>
                         <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <li data-target="#homeCarousel" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="img/WinCo.jpg" height="300" alt="Winco" />
+                            <img class="d-block w-100" src="img/WinCo.jpg" height="500" alt="Winco" />
+                            <div class="carousel-caption">
+                                <h3><a href="https://www.wincofoods.com/">Winco Foods</a></h3>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/pizza1.jpg" height="300" alt="Pizza" />
+                            <img class="d-block w-100" src="img/pizza1.jpg" height="500" alt="Pizza" />
+                            <div class="carousel-caption">
+                                <h3><a href="https://www.mountainmikespizza.com/">Mountain Mike's</a></h3>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/tailgaters.jfif" height="300" alt="Tailgaters" />
+                            <img class="d-block w-100" src="img/tailgaters.jfif" height="500" alt="Tailgaters" />
+                            <div class="carousel-caption">
+                                <h3><a href="http://tailgaterssportsbars.com/">Tailgaters Sports Bar</a></h3>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="img/Big5.jfif" height="300" alt="Big5" />
+                            <img class="d-block w-100" src="img/Big5.jfif" height="500" alt="Big5" />
+                            <div class="carousel-caption">
+                                <h3><a href="https://www.big5sportinggoods.com/store/">Big 5</a></h3>
+                            </div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
@@ -638,24 +623,6 @@
                         <i class="fa fa-pause"></i>
                     </button>
                 </div>
-            </div>
-            <div class="col-sm-3">
-                <h3>Our Sponsors</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.mountainmikespizza.com/">Mountain Mike's</a></li>
-                        <li><a href="https://www.big5sportinggoods.com/store/">Big 5</a></li>
-                        <li><a href="http://tailgaterssportsbars.com/">Tailgaters Sports Bar</a></li>
-                        <li><a href="https://www.wincofoods.com/">Winco Foods</a></li>
-                    </ul>
-            </div>  
-            <div class="col-sm-3">
-                <h3>Our Brands</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.adidas.com/us">Adidas</a></li>
-                        <li><a href="https://scoresports.com">Score Sports</a></li>
-                        <li><a href="https://www.nike.com/">Nike</a></li>
-                        <li><a href="https://www.dickssportinggoods.com/">Dick's Sporting Goods</a></li>
-                    </ul>
             </div>
         </div> 
     </div>
@@ -681,7 +648,6 @@
                         <a role="button" class="btn btn-link" href="tel:+19251001234"><i class="fa fa-phone"></i> 1-925-100-1234</a><br />
                         <a role="button" class="btn btn-link" href="mailto:ssleague@soccer.co"><i class="fa fa-envelope-o"></i> sslegaue@soccer.co</a>
                     </div>
-
                 </div>
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Sponsors</h5>
@@ -692,9 +658,6 @@
                         <li><a href="https://www.wincofoods.com/">Winco Foods</a></li>
                     </ul>
                 </div>
-
-                </div>
-
             </div>  
         </div> 
     </footer>
